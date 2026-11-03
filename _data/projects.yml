@@ -6,88 +6,88 @@
 #   summary: 한두 문장 설명
 #   category: app | ai | game | study   (위쪽 분류 버튼과 연결)
 #   tags: [기술, 이름]
-#   status: 운영 중 | 개발 중 | 완료 | 수업
-#   featured: true                      (첫 화면 "대표 프로젝트"에 보이기)
+#   status: Live | In progress | Done | Coursework
+#   featured: true                      (첫 화면 "Featured"에 보이기)
 #   links:
-#     - { label: 사이트, url: https://... }
+#     - { label: Website, url: https://... }
 #     - { label: GitHub, url: https://... }
 
 - id: coinfloat
   title: CoinFloat
   emoji: "🪙"
-  summary: 다른 앱을 쓰는 동안 화면 위에 작게 띄워 두는 암호화폐 실시간 시세 오버레이 앱.
+  summary: A tiny floating overlay that shows real-time crypto prices on top of any Android app.
   category: app
   tags: [Android, WebSocket, Binance]
-  status: 운영 중
+  status: Live
   featured: true
   links:
-    - { label: 소개 페이지, url: "https://coinfloat.byhyesung.com/about.html" }
-    - { label: APK 받기, url: "https://github.com/wlgptjd333/coin-float/releases/latest" }
+    - { label: Website, url: "https://coinfloat.byhyesung.com/about.html" }
+    - { label: Download APK, url: "https://github.com/wlgptjd333/coin-float/releases/latest" }
     - { label: GitHub, url: "https://github.com/wlgptjd333/coin-float" }
 
 - id: body-hero
   title: Body Hero
   emoji: "🥊"
-  summary: 웹캠 하나로 펀치·어퍼컷·가드·스쿼트를 인식해 몬스터와 싸우는 2D 복싱 운동 게임. 졸업작품.
+  summary: A 2D boxing workout game you play with just a webcam — punches, uppercuts, guards, and squats fight the monsters. My graduation project.
   category: game
   tags: [Godot, MediaPipe Pose, 1D-CNN]
-  status: 완료
+  status: Done
   featured: true
   links:
-    - { label: 다운로드, url: "https://github.com/wlgptjd333/body-hero/releases/latest" }
+    - { label: Download, url: "https://github.com/wlgptjd333/body-hero/releases/latest" }
     - { label: GitHub, url: "https://github.com/wlgptjd333/body-hero" }
 
 - id: sori-recorder
-  title: 소리 녹음기
+  title: Sori Recorder
   emoji: "🎙️"
-  summary: 사람 목소리가 들릴 때만 골라서 녹음하는 개인용 안드로이드 앱. 음성 감지는 폰 안에서 합니다.
+  summary: A personal Android recorder that saves audio only when someone is speaking. Voice detection runs on the phone.
   category: app
   tags: [Android, Kotlin, Silero VAD]
-  status: 개발 중
+  status: In progress
   featured: true
   links:
     - { label: GitHub, url: "https://github.com/wlgptjd333/sori-recorder" }
 
 - id: inklog
-  title: 종이 점검일지 디지털화
+  title: InkLog
   emoji: "📝"
-  summary: 종이 점검일지를 사진만 찍으면 칸별 데이터로 쌓고, 이상값은 바로 경고하는 머신비전 미니프로젝트.
+  summary: Snap a photo of a paper inspection log and get cell-by-cell data, with out-of-range values flagged right away.
   category: ai
   tags: [OpenCV, OCR, Python]
-  status: 개발 중
+  status: In progress
   featured: true
   links:
     - { label: GitHub, url: "https://github.com/wlgptjd333/handnote-digitizer" }
 
 - id: machinevision
-  title: 머신비전 검사 서비스
+  title: Machine Vision Inspection
   emoji: "🔍"
-  summary: ROI·Rule·SIFT·OCR·Anomaly Detection·Few-shot을 거쳐 FastAPI 웹 검사 화면까지 만든 교과 9 실습.
+  summary: From ROI and rules through SIFT, OCR, anomaly detection, and few-shot learning to a FastAPI inspection dashboard.
   category: study
   tags: [OpenCV, PyTorch, FastAPI]
-  status: 수업
+  status: Coursework
   featured: false
   links:
     - { label: GitHub, url: "https://github.com/wlgptjd333/machine-vision-pipeline" }
 
 - id: fastapi-sentiment
-  title: 감정분석 API
+  title: Sentiment Analysis API
   emoji: "💬"
-  summary: Hugging Face 감정분석 모델을 FastAPI에 붙이고, DB 저장과 Redis·Celery 비동기 처리까지 연결한 실습.
+  summary: A Hugging Face sentiment model served with FastAPI, with database storage and async processing on Redis and Celery.
   category: study
   tags: [FastAPI, Hugging Face, Celery]
-  status: 수업
+  status: Coursework
   featured: false
   links:
     - { label: GitHub, url: "https://github.com/wlgptjd333/fastapi-sentiment-api" }
 
 - id: ai-dev-basics
-  title: AI 과정 실습 모음
+  title: AI Coursework
   emoji: "📚"
-  summary: 파이썬·SQL·웹·데이터분석·머신러닝·딥러닝·OpenCV 수업 실습과 과제를 한곳에 모은 저장소.
+  summary: All my class exercises in one place — Python, SQL, web, data analysis, machine learning, deep learning, and OpenCV.
   category: study
   tags: [Python, ML, Web]
-  status: 수업
+  status: Coursework
   featured: false
   links:
     - { label: GitHub, url: "https://github.com/wlgptjd333/ai-dev-basics" }

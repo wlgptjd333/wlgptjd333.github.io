@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ site.lang | default: 'ko' }}">
+<html lang="{{ site.lang | default: 'en' }}">
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -20,10 +20,10 @@
         <span class="brand-mark" aria-hidden="true">H</span>
         <span>{{ site.title }}</span>
       </a>
-      <nav class="nav" aria-label="주 메뉴">
-        <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects/' %}aria-current="page"{% endif %}>프로젝트</a>
-        <a href="{{ '/posts/' | relative_url }}" {% if page.url contains '/posts/' %}aria-current="page"{% endif %}>글</a>
-        <button class="theme-toggle" type="button" aria-label="밝게·어둡게 바꾸기" title="밝게·어둡게">
+      <nav class="nav" aria-label="Main">
+        <a href="{{ '/projects/' | relative_url }}" {% if page.url contains '/projects/' %}aria-current="page"{% endif %}>Projects</a>
+        <a href="{{ '/posts/' | relative_url }}" {% if page.url contains '/posts/' %}aria-current="page"{% endif %}>Posts</a>
+        <button class="theme-toggle" type="button" aria-label="Toggle dark mode" title="Toggle dark mode">
           {% include icon.html name="theme" %}
         </button>
       </nav>

@@ -3,7 +3,7 @@ layout: default
 ---
 {%- assign me = site.data.profile -%}
 <section class="hero">
-  <img class="avatar" src="{{ me.avatar }}" alt="{{ me.name }} 프로필 사진" width="112" height="112">
+  <img class="avatar" src="{{ me.avatar }}" alt="{{ me.name }} profile photo" width="112" height="112">
   <div class="hero-text">
     <p class="handle">@{{ me.handle }}</p>
     <h1>{{ me.name }}</h1>
@@ -19,7 +19,7 @@ layout: default
 
 {%- if me.now %}
 <section class="now card">
-  <h2 class="now-title">지금 하는 일</h2>
+  <h2 class="now-title">Now</h2>
   <ul>
     {%- for item in me.now %}<li>{{ item }}</li>{% endfor %}
   </ul>
@@ -28,8 +28,8 @@ layout: default
 
 <section class="section">
   <div class="section-head">
-    <h2>대표 프로젝트</h2>
-    <a class="more" href="{{ '/projects/' | relative_url }}">전체 보기 {% include icon.html name="arrow" %}</a>
+    <h2>Featured projects</h2>
+    <a class="more" href="{{ '/projects/' | relative_url }}">All projects {% include icon.html name="arrow" %}</a>
   </div>
   <div class="grid">
     {%- assign featured = site.data.projects | where: "featured", true -%}
@@ -39,8 +39,8 @@ layout: default
 
 <section class="section">
   <div class="section-head">
-    <h2>최근 글</h2>
-    <a class="more" href="{{ '/posts/' | relative_url }}">모든 글 {% include icon.html name="arrow" %}</a>
+    <h2>Recent posts</h2>
+    <a class="more" href="{{ '/posts/' | relative_url }}">All posts {% include icon.html name="arrow" %}</a>
   </div>
   {%- assign recent = site.posts | slice: 0, 5 -%}
   {% include post-list.html posts=recent %}

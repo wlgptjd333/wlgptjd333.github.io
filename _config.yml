@@ -1,8 +1,8 @@
 title: byhyesung
-description: AI·비전·앱을 만들고 기록하는 Hyesung의 홈
+description: Hyesung's home hub — AI vision, apps, games, and notes
 url: "https://byhyesung.com"
 baseurl: ""
-lang: ko
+lang: en
 timezone: Asia/Seoul
 
 author:
