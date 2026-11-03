@@ -1,0 +1,5 @@
+# 프로젝트 분류 버튼. projects.yml의 category 값과 id가 같아야 한다.
+- { id: app, label: 앱 }
+- { id: ai, label: AI·비전 }
+- { id: game, label: 게임 }
+- { id: study, label: 수업 }

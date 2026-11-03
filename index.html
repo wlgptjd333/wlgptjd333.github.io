@@ -1,0 +1,47 @@
+---
+layout: default
+---
+{%- assign me = site.data.profile -%}
+<section class="hero">
+  <img class="avatar" src="{{ me.avatar }}" alt="{{ me.name }} 프로필 사진" width="112" height="112">
+  <div class="hero-text">
+    <p class="handle">@{{ me.handle }}</p>
+    <h1>{{ me.name }}</h1>
+    <p class="tagline">{{ me.tagline }}</p>
+    <p class="intro">{{ me.intro }}</p>
+    <div class="link-row">
+      {%- for l in me.links %}
+      <a class="pill" href="{{ l.url | relative_url }}"{% if l.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{% include icon.html name=l.icon %}<span>{{ l.label }}</span></a>
+      {%- endfor %}
+    </div>
+  </div>
+</section>
+
+{%- if me.now %}
+<section class="now card">
+  <h2 class="now-title">지금 하는 일</h2>
+  <ul>
+    {%- for item in me.now %}<li>{{ item }}</li>{% endfor %}
+  </ul>
+</section>
+{%- endif %}
+
+<section class="section">
+  <div class="section-head">
+    <h2>대표 프로젝트</h2>
+    <a class="more" href="{{ '/projects/' | relative_url }}">전체 보기 {% include icon.html name="arrow" %}</a>
+  </div>
+  <div class="grid">
+    {%- assign featured = site.data.projects | where: "featured", true -%}
+    {%- for p in featured %}{% include project-card.html project=p %}{% endfor %}
+  </div>
+</section>
+
+<section class="section">
+  <div class="section-head">
+    <h2>최근 글</h2>
+    <a class="more" href="{{ '/posts/' | relative_url }}">모든 글 {% include icon.html name="arrow" %}</a>
+  </div>
+  {%- assign recent = site.posts | slice: 0, 5 -%}
+  {% include post-list.html posts=recent %}
+</section>

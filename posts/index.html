@@ -1,0 +1,19 @@
+---
+layout: default
+title: 글
+description: 수업 정리, 프로젝트 기록, 회고
+---
+<header class="page-head">
+  <h1>글</h1>
+  <p class="muted">수업 정리, 프로젝트 기록, 회고. <a href="{{ '/feed.xml' | relative_url }}">RSS</a></p>
+</header>
+
+{%- assign years = site.posts | group_by_exp: "post", "post.date | date: '%Y'" -%}
+{%- for y in years %}
+<section class="year-group">
+  <h2 class="year">{{ y.name }}</h2>
+  {% include post-list.html posts=y.items %}
+</section>
+{%- else %}
+<p class="muted">아직 글이 없어요.</p>
+{%- endfor %}

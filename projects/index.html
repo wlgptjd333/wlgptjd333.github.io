@@ -1,0 +1,23 @@
+---
+layout: default
+title: 프로젝트
+description: 직접 만든 앱·게임·AI 프로젝트와 수업 실습
+---
+<header class="page-head">
+  <h1>프로젝트</h1>
+  <p class="muted">만든 것과 배우며 만든 것. 카드의 링크로 바로 이동합니다.</p>
+</header>
+
+<div class="filters" role="group" aria-label="분류">
+  <button type="button" class="filter" data-filter="all" aria-pressed="true">전체 <span class="count">{{ site.data.projects.size }}</span></button>
+  {%- for c in site.data.categories %}
+  {%- assign n = site.data.projects | where: "category", c.id | size -%}
+  {%- if n > 0 %}
+  <button type="button" class="filter" data-filter="{{ c.id }}" aria-pressed="false">{{ c.label }} <span class="count">{{ n }}</span></button>
+  {%- endif %}
+  {%- endfor %}
+</div>
+
+<div class="grid" id="project-grid">
+  {%- for p in site.data.projects %}{% include project-card.html project=p %}{% endfor %}
+</div>

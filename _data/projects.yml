@@ -1,0 +1,93 @@
+# 프로젝트 목록. 새 프로젝트는 아래 형식으로 한 덩어리를 추가하면 카드가 생긴다.
+#
+# - id: 영문-소문자-이름          (겹치지 않게)
+#   title: 화면에 보일 이름
+#   emoji: 카드 아이콘 하나
+#   summary: 한두 문장 설명
+#   category: app | ai | game | study   (위쪽 분류 버튼과 연결)
+#   tags: [기술, 이름]
+#   status: 운영 중 | 개발 중 | 완료 | 수업
+#   featured: true                      (첫 화면 "대표 프로젝트"에 보이기)
+#   links:
+#     - { label: 사이트, url: https://... }
+#     - { label: GitHub, url: https://... }
+
+- id: coinfloat
+  title: CoinFloat
+  emoji: "🪙"
+  summary: 다른 앱을 쓰는 동안 화면 위에 작게 띄워 두는 암호화폐 실시간 시세 오버레이 앱.
+  category: app
+  tags: [Android, WebSocket, Binance]
+  status: 운영 중
+  featured: true
+  links:
+    - { label: 소개 페이지, url: "https://coinfloat.byhyesung.com/about.html" }
+    - { label: APK 받기, url: "https://github.com/wlgptjd333/coin-float/releases/latest" }
+    - { label: GitHub, url: "https://github.com/wlgptjd333/coin-float" }
+
+- id: body-hero
+  title: Body Hero
+  emoji: "🥊"
+  summary: 웹캠 하나로 펀치·어퍼컷·가드·스쿼트를 인식해 몬스터와 싸우는 2D 복싱 운동 게임. 졸업작품.
+  category: game
+  tags: [Godot, MediaPipe Pose, 1D-CNN]
+  status: 완료
+  featured: true
+  links:
+    - { label: 다운로드, url: "https://github.com/wlgptjd333/body-hero/releases/latest" }
+    - { label: GitHub, url: "https://github.com/wlgptjd333/body-hero" }
+
+- id: sori-recorder
+  title: 소리 녹음기
+  emoji: "🎙️"
+  summary: 사람 목소리가 들릴 때만 골라서 녹음하는 개인용 안드로이드 앱. 음성 감지는 폰 안에서 합니다.
+  category: app
+  tags: [Android, Kotlin, Silero VAD]
+  status: 개발 중
+  featured: true
+  links:
+    - { label: GitHub, url: "https://github.com/wlgptjd333/sori-recorder" }
+
+- id: inklog
+  title: 종이 점검일지 디지털화
+  emoji: "📝"
+  summary: 종이 점검일지를 사진만 찍으면 칸별 데이터로 쌓고, 이상값은 바로 경고하는 머신비전 미니프로젝트.
+  category: ai
+  tags: [OpenCV, OCR, Python]
+  status: 개발 중
+  featured: true
+  links:
+    - { label: GitHub, url: "https://github.com/wlgptjd333/handnote-digitizer" }
+
+- id: machinevision
+  title: 머신비전 검사 서비스
+  emoji: "🔍"
+  summary: ROI·Rule·SIFT·OCR·Anomaly Detection·Few-shot을 거쳐 FastAPI 웹 검사 화면까지 만든 교과 9 실습.
+  category: study
+  tags: [OpenCV, PyTorch, FastAPI]
+  status: 수업
+  featured: false
+  links:
+    - { label: GitHub, url: "https://github.com/wlgptjd333/machine-vision-pipeline" }
+
+- id: fastapi-sentiment
+  title: 감정분석 API
+  emoji: "💬"
+  summary: Hugging Face 감정분석 모델을 FastAPI에 붙이고, DB 저장과 Redis·Celery 비동기 처리까지 연결한 실습.
+  category: study
+  tags: [FastAPI, Hugging Face, Celery]
+  status: 수업
+  featured: false
+  links:
+    - { label: GitHub, url: "https://github.com/wlgptjd333/fastapi-sentiment-api" }
+
+- id: ai-dev-basics
+  title: AI 과정 실습 모음
+  emoji: "📚"
+  summary: 파이썬·SQL·웹·데이터분석·머신러닝·딥러닝·OpenCV 수업 실습과 과제를 한곳에 모은 저장소.
+  category: study
+  tags: [Python, ML, Web]
+  status: 수업
+  featured: false
+  links:
+    - { label: GitHub, url: "https://github.com/wlgptjd333/ai-dev-basics" }

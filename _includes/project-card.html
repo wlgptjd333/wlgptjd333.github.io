@@ -1,0 +1,27 @@
+{%- assign p = include.project -%}
+{%- case p.status -%}
+{%- when "운영 중" -%}{%- assign status_class = "live" -%}
+{%- when "개발 중" -%}{%- assign status_class = "wip" -%}
+{%- when "완료" -%}{%- assign status_class = "done" -%}
+{%- else -%}{%- assign status_class = "study" -%}
+{%- endcase -%}
+<article class="card project" data-category="{{ p.category }}" id="{{ p.id }}">
+  <div class="project-top">
+    <span class="project-emoji" aria-hidden="true">{{ p.emoji }}</span>
+    <span class="status status-{{ status_class }}">{{ p.status }}</span>
+  </div>
+  <h3 class="project-title">{{ p.title }}</h3>
+  <p class="project-summary">{{ p.summary }}</p>
+  {%- if p.tags -%}
+  <ul class="tags" aria-label="사용 기술">
+    {%- for t in p.tags %}<li>{{ t }}</li>{% endfor -%}
+  </ul>
+  {%- endif -%}
+  {%- if p.links -%}
+  <div class="project-links">
+    {%- for l in p.links %}
+    <a href="{{ l.url | relative_url }}"{% if l.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}{% include icon.html name="arrow" %}</a>
+    {%- endfor %}
+  </div>
+  {%- endif -%}
+</article>

@@ -1,0 +1,26 @@
+# 첫 화면 소개. 고치면 바로 반영된다.
+name: Hyesung
+handle: byhyesung
+avatar: https://avatars.githubusercontent.com/u/45970948?v=4
+tagline: AI 비전과 앱을 만들고, 배운 것을 기록합니다
+intro: >-
+  AI 과정에서 머신비전·딥러닝·서비스 구현을 배우고 있어요.
+  직접 쓰고 싶은 앱과 게임을 만들고, 수업 정리와 실험 기록을 여기에 모읍니다.
+
+# 링크 버튼. icon: github / mail / blog / link / youtube / instagram
+links:
+  - label: GitHub
+    url: https://github.com/wlgptjd333
+    icon: github
+  - label: 글
+    url: /posts/
+    icon: blog
+  # 메일 주소를 정하면 아래 주석을 풀고 주소를 바꾼다
+  # - label: 메일
+  #   url: mailto:hello@byhyesung.com
+  #   icon: mail
+
+# 지금 하고 있는 것 (첫 화면 작은 상자)
+now:
+  - AI 과정 — 교과 9 머신비전 마무리, 교과 10 자세추정 시작
+  - 종이 점검일지 디지털화(InkLog) 미니프로젝트

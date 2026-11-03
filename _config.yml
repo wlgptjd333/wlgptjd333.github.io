@@ -1,0 +1,36 @@
+title: byhyesung
+description: AI·비전·앱을 만들고 기록하는 Hyesung의 홈
+url: "https://byhyesung.com"
+baseurl: ""
+lang: ko
+timezone: Asia/Seoul
+
+author:
+  name: Hyesung
+  github: wlgptjd333
+
+permalink: /posts/:year/:month/:day/:title/
+
+markdown: kramdown
+kramdown:
+  input: GFM
+  hard_wrap: false
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock
+  - compose.yaml
+  - vendor
