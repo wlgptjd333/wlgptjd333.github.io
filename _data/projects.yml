@@ -48,17 +48,6 @@
   links:
     - { label: GitHub, url: "https://github.com/wlgptjd333/sori-recorder" }
 
-- id: inklog
-  title: InkLog
-  emoji: "📝"
-  summary: Snap a photo of a paper inspection log and get cell-by-cell data, with out-of-range values flagged right away.
-  category: ai
-  tags: [OpenCV, OCR, Python]
-  status: In progress
-  featured: true
-  links:
-    - { label: GitHub, url: "https://github.com/wlgptjd333/handnote-digitizer" }
-
 - id: machinevision
   title: Machine Vision Inspection
   emoji: "🔍"
