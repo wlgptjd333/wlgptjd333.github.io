@@ -4,9 +4,9 @@ handle: byhyesung
 avatar: https://avatars.githubusercontent.com/u/45970948?v=4
 tagline: Building AI vision tools and apps, and writing down what I learn.
 intro: >-
-  I'm studying machine vision, deep learning, and AI service development
-  in the AI program. I build the apps
-  and games I want to use myself, and keep my notes and experiments here.
+  I'm studying machine vision, deep learning, and AI service development.
+  I build the apps and games I want to use myself, and keep my notes and
+  experiments here.
 
 # 링크 버튼. icon: github / mail / blog / link / youtube / instagram
 links:
@@ -23,4 +23,4 @@ links:
 
 # 지금 하고 있는 것 (첫 화면 작은 상자)
 now:
-  - AI program — wrapping up Machine Vision, starting Pose Estimation next
+  - Pose estimation and motion capture — detecting unusual behavior in unmanned stores
