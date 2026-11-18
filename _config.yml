@@ -1,12 +1,12 @@
 title: byhyesung
-description: Hyesung's home hub — AI vision, apps, games, and notes
+description: Hyesung Ji — vision AI for human motion, plus apps, games, and notes
 url: "https://byhyesung.com"
 baseurl: ""
 lang: en
 timezone: Asia/Seoul
 
 author:
-  name: Hyesung
+  name: Hyesung Ji
   github: wlgptjd333
 
 permalink: /posts/:year/:month/:day/:title/

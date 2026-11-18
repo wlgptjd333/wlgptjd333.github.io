@@ -1,0 +1,36 @@
+<!-- 움직이는 자세 인식 카드 (GitHub 프로필 머리 그림과 같은 모양). 색은 assets/css/site.css의 .pc-* 가 정한다. -->
+<svg class="pose-card" viewBox="0 0 272 250" width="272" height="250" role="img" aria-label="Pose estimation demo: a skeleton switches from guard to a right punch">
+  <defs>
+    <linearGradient id="pc-grad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#2997ff"/><stop offset=".5" stop-color="#bf5af2"/><stop offset="1" stop-color="#ff375f"/>
+    </linearGradient>
+  </defs>
+  <rect class="pc-card" width="272" height="250" rx="22"/>
+  <circle class="pc-pulse" cx="24" cy="22" r="4" fill="#ff375f"/><circle cx="24" cy="22" r="4" fill="#ff375f"/>
+  <text class="pc-text pc-bold" x="36" y="26.5" font-size="12" letter-spacing=".5">LIVE</text>
+  <text class="pc-muted" x="256" y="26.5" text-anchor="end" font-size="12">webcam · 30 FPS</text>
+  <g transform="translate(16 40)">
+    <rect class="pc-screen" width="240" height="150" rx="14"/>
+    <path class="pc-corner" d="M10 24V16a6 6 0 0 1 6-6h8M216 10h8a6 6 0 0 1 6 6v8M230 126v8a6 6 0 0 1-6 6h-8M24 140h-8a6 6 0 0 1-6-6v-8"/>
+    <rect x="76" y="16" width="90" height="126" rx="6" fill="none" stroke="#ff9f0a" stroke-width="1.6" stroke-dasharray="5 4"/>
+    <rect x="76" y="2" width="98" height="16" rx="4" fill="#ff9f0a"/>
+    <text class="pc-mono" x="82" y="14" font-size="11" fill="#1d1d1f">guard 0.94<animate attributeName="opacity" values="1;1;0;0;1;1" keyTimes="0;0.42;0.5;0.74;0.84;1" dur="2.6s" repeatCount="indefinite"/></text>
+    <text class="pc-mono" x="82" y="14" font-size="11" fill="#1d1d1f" opacity="0">punch_r 0.97<animate attributeName="opacity" values="0;0;1;1;0;0" keyTimes="0;0.42;0.5;0.74;0.84;1" dur="2.6s" repeatCount="indefinite"/></text>
+    <g class="pc-limb">
+      <path d="M100 60H140M120 54V106M108 106H132M108 106L104 138M132 106L136 138M100 60L90 80L108 48"/>
+      <polyline points="140,60 150,80 132,48"><animate attributeName="points" values="140,60 150,80 132,48;140,60 150,80 132,48;140,60 147,72 135,64;140,60 147,72 135,64;140,60 150,80 132,48;140,60 150,80 132,48" keyTimes="0;0.42;0.5;0.74;0.84;1" dur="2.6s" repeatCount="indefinite"/></polyline>
+    </g>
+    <circle class="pc-head" cx="120" cy="38" r="11"/>
+    <g class="pc-joint">
+      <circle cx="100" cy="60" r="3.6"/><circle cx="140" cy="60" r="3.6"/><circle cx="90" cy="80" r="3.6"/><circle cx="108" cy="48" r="4.4"/>
+      <circle cx="108" cy="106" r="3.6"/><circle cx="132" cy="106" r="3.6"/>
+      <circle cx="150" cy="80" r="3.6"><animate attributeName="cx" values="150;150;147;147;150;150" keyTimes="0;0.42;0.5;0.74;0.84;1" dur="2.6s" repeatCount="indefinite"/><animate attributeName="cy" values="80;80;72;72;80;80" keyTimes="0;0.42;0.5;0.74;0.84;1" dur="2.6s" repeatCount="indefinite"/></circle>
+    </g>
+    <circle cx="135" cy="64" r="19" fill="none" stroke="#ff375f" stroke-width="1.6" opacity="0"><animate attributeName="opacity" values="0;0;0.5;0.5;0;0" keyTimes="0;0.42;0.5;0.74;0.84;1" dur="2.6s" repeatCount="indefinite"/></circle>
+    <circle cx="132" cy="48" r="5.2" fill="#ff375f"><animate attributeName="cx" values="132;132;135;135;132;132" keyTimes="0;0.42;0.5;0.74;0.84;1" dur="2.6s" repeatCount="indefinite"/><animate attributeName="cy" values="48;48;64;64;48;48" keyTimes="0;0.42;0.5;0.74;0.84;1" dur="2.6s" repeatCount="indefinite"/><animate attributeName="r" values="5.2;5.2;12.5;12.5;5.2;5.2" keyTimes="0;0.42;0.5;0.74;0.84;1" dur="2.6s" repeatCount="indefinite"/></circle>
+  </g>
+  <text class="pc-text pc-mono" x="18" y="216" font-size="12.5">punch_r</text>
+  <rect class="pc-track" x="82" y="207" width="172" height="8" rx="4"/>
+  <rect x="82" y="207" width="12" height="8" rx="4" fill="url(#pc-grad)"><animate attributeName="width" values="12;12;167;167;12;12" keyTimes="0;0.42;0.5;0.74;0.84;1" dur="2.6s" repeatCount="indefinite"/></rect>
+  <text class="pc-muted" x="18" y="236" font-size="11.5">MediaPipe Pose → 1D-CNN → Godot</text>
+</svg>

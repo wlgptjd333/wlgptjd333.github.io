@@ -1,12 +1,10 @@
 # 첫 화면 소개. 고치면 바로 반영된다.
-name: Hyesung
-handle: byhyesung
+name: Hyesung Ji
+name_ko: 지혜성
 avatar: https://avatars.githubusercontent.com/u/45970948?v=4
-tagline: Building AI vision tools and apps, and writing down what I learn.
-intro: >-
-  I'm studying machine vision, deep learning, and AI service development.
-  I build the apps and games I want to use myself, and keep my notes and
-  experiments here.
+tagline: I build vision AI that recognizes human motion.
+# 이름 아래 알약. 첫 번째만 색이 들어간다.
+chips: [Pose Estimation, Action Recognition, Model Serving]
 
 # 링크 버튼. icon: github / mail / blog / link / youtube / instagram
 links:
@@ -21,6 +19,7 @@ links:
   #   url: mailto:hello@byhyesung.com
   #   icon: mail
 
-# 지금 하고 있는 것 (첫 화면 작은 상자)
+# 지금 하고 있는 것 (첫 화면 한 줄). url은 없어도 된다.
 now:
-  - Pose estimation and motion capture — detecting unusual behavior in unmanned stores
+  text: Detecting unusual behavior in unmanned stores from 2D pose sequences (team project)
+  url: https://github.com/wlgptjd333/unmanned-store-anomaly

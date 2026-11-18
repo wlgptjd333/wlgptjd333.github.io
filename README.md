@@ -1,6 +1,6 @@
 # byhyesung.com
 
-Hyesung's home hub — projects, posts, and links in one place. Built with Jekyll on GitHub Pages, with DNS on Cloudflare.
+Hyesung Ji's home hub — projects, posts, and links in one place. Built with Jekyll on GitHub Pages, with DNS on Cloudflare.
 
 ## How to update
 
@@ -8,10 +8,12 @@ Hyesung's home hub — projects, posts, and links in one place. Built with Jekyl
 |---|---|
 | Add or edit a project | `_data/projects.yml` (copy the format at the top) |
 | Show a project on the home page | Add `featured: true` to it |
+| Add a role line or big numbers to a card | `role`, `stats` in `_data/projects.yml` |
+| Change the moving pose card on the home page | `_includes/pose-card.html` (colors: `.pc-*` in `assets/css/site.css`) |
 | Add a filter category | `_data/categories.yml` |
 | Change the intro, links, or "Now" | `_data/profile.yml` |
 | Write a post | Add `_posts/YYYY-MM-DD-title.md` |
-| Change colors | Tokens at the top of `assets/css/style.css` |
+| Change colors | Tokens at the top of `assets/css/site.css` |
 
 Edit a file on GitHub and commit — the site updates in a minute or two. Works from a phone too.
 

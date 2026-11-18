@@ -3,50 +3,106 @@
 # - id: 영문-소문자-이름          (겹치지 않게)
 #   title: 화면에 보일 이름
 #   emoji: 카드 아이콘 하나
+#   role: 맡은 일 한 줄                 (없어도 된다)
 #   summary: 한두 문장 설명
+#   stats:                              (없어도 된다. 큰 숫자 두 개까지, 바뀌지 않는 측정값만)
+#   visual: live-chart                  (숫자 대신 작은 시세 그림. CoinFloat용)
+#     - { value: "99.0%", label: action accuracy }
 #   category: app | ai | game | study   (위쪽 분류 버튼과 연결)
 #   tags: [기술, 이름]
 #   status: Live | In progress | Done | Coursework
 #   featured: true                      (첫 화면 "Featured"에 보이기)
-#   links:
+#   links:                              (비공개 저장소는 링크를 넣지 않는다)
 #     - { label: Website, url: https://... }
 #     - { label: GitHub, url: https://... }
-
-- id: coinfloat
-  title: CoinFloat
-  emoji: "🪙"
-  summary: A tiny floating overlay that shows real-time crypto prices on top of any Android app.
-  category: app
-  tags: [Android, WebSocket, Binance]
-  status: Live
-  featured: true
-  links:
-    - { label: Website, url: "https://coinfloat.byhyesung.com/about.html" }
-    - { label: Download APK, url: "https://github.com/wlgptjd333/coin-float/releases/latest" }
-    - { label: GitHub, url: "https://github.com/wlgptjd333/coin-float" }
 
 - id: body-hero
   title: Body Hero
   emoji: "🥊"
-  summary: A 2D boxing workout game you play with just a webcam — punches, uppercuts, guards, and squats fight the monsters. My graduation project.
+  role: Team lead · Graduation project
+  summary: A 2D boxing game you play with just a webcam — punch, uppercut, guard, and squat to fight monsters.
+  stats:
+    - { value: "99.0%", label: action accuracy }
+    - { value: "30 FPS", label: "on CPU, no GPU" }
   category: game
-  tags: [Godot, MediaPipe Pose, 1D-CNN]
+  tags: [MediaPipe Pose, 1D-CNN, Godot]
   status: Done
   featured: true
   links:
     - { label: Download, url: "https://github.com/wlgptjd333/body-hero/releases/latest" }
     - { label: GitHub, url: "https://github.com/wlgptjd333/body-hero" }
 
+- id: bean-leaf-api
+  title: Bean Leaf Disease API
+  emoji: "🌱"
+  summary: A fine-tuned ResNet-18 that sorts bean leaf photos into healthy, angular leaf spot, and rust, served through sync and async FastAPI endpoints.
+  stats:
+    - { value: "97.7%", label: test accuracy }
+    - { value: "22 ms", label: API response }
+  category: ai
+  tags: [PyTorch, FastAPI, Celery, Redis]
+  status: Done
+  featured: true
+  links:
+    - { label: GitHub, url: "https://github.com/wlgptjd333/bean-leaf-disease-api" }
+
+- id: coinfloat
+  title: CoinFloat
+  emoji: "🪙"
+  summary: A tiny floating window with live crypto prices on top of any Android app. I use it daily and keep shipping fixes.
+  visual: live-chart
+  category: app
+  tags: [Kotlin, WebSocket, JavaScript]
+  status: Live
+  featured: true
+  links:
+    - { label: Website, url: "https://coinfloat.byhyesung.com/about.html" }
+    - { label: Download, url: "https://github.com/wlgptjd333/coin-float/releases/latest" }
+    - { label: GitHub, url: "https://github.com/wlgptjd333/coin-float" }
+
+- id: unmanned-store-anomaly
+  title: Unmanned Store Anomaly Detection
+  emoji: "🏪"
+  role: Team project
+  summary: Spotting vandalism, violence, loitering, and falls in an unmanned store from 2D pose sequences.
+  stats:
+    - { value: "17", label: actions to tell apart }
+  category: ai
+  tags: [YOLO Pose, Pose sequences, Python]
+  status: In progress
+  links:
+    - { label: GitHub, url: "https://github.com/wlgptjd333/unmanned-store-anomaly" }
+
+- id: kimchi-inspection
+  title: Kimchi Foreign Object Detection
+  emoji: "🥬"
+  role: Team project
+  summary: Built a labeling tool, cross-checked all 900 photos, and fixed 235 labels before training YOLO11.
+  stats:
+    - { value: "0.749", label: "val mAP50–95, up from 0.470" }
+  category: ai
+  tags: [YOLO11, Python, Labeling tool]
+  status: Done
+  links:
+    - { label: GitHub, url: "https://github.com/ariuck/group_3" }
+
 - id: sori-recorder
   title: Sori Recorder
   emoji: "🎙️"
-  summary: A personal Android recorder that saves audio only when someone is speaking. Voice detection runs on the phone.
+  summary: A personal Android recorder that keeps only the parts where someone is speaking. Voice detection runs on the phone.
   category: app
   tags: [Android, Kotlin, Silero VAD]
   status: In progress
-  featured: true
+
+- id: vision-ai-coursework
+  title: Vision AI Coursework
+  emoji: "🧪"
+  summary: Machine vision, model serving, pose estimation, and motion capture exercises in one place.
+  category: study
+  tags: [OpenCV, PyTorch, FastAPI]
+  status: Coursework
   links:
-    - { label: GitHub, url: "https://github.com/wlgptjd333/sori-recorder" }
+    - { label: GitHub, url: "https://github.com/wlgptjd333/vision-ai-lab" }
 
 - id: machinevision
   title: Machine Vision Inspection
@@ -55,7 +111,6 @@
   category: study
   tags: [OpenCV, PyTorch, FastAPI]
   status: Coursework
-  featured: false
   links:
     - { label: GitHub, url: "https://github.com/wlgptjd333/machine-vision-pipeline" }
 
@@ -66,17 +121,15 @@
   category: study
   tags: [FastAPI, Hugging Face, Celery]
   status: Coursework
-  featured: false
   links:
     - { label: GitHub, url: "https://github.com/wlgptjd333/fastapi-sentiment-api" }
 
 - id: ai-dev-basics
-  title: AI Coursework
+  title: AI Foundations Coursework
   emoji: "📚"
-  summary: All my class exercises in one place — Python, SQL, web, data analysis, machine learning, deep learning, and OpenCV.
+  summary: Python, SQL, web, data analysis, machine learning, deep learning, and OpenCV exercises in one place.
   category: study
   tags: [Python, ML, Web]
   status: Coursework
-  featured: false
   links:
     - { label: GitHub, url: "https://github.com/wlgptjd333/ai-dev-basics" }

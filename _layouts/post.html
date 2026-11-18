@@ -13,8 +13,10 @@ layout: default
   <div class="prose">
     {{ content }}
   </div>
+  {%- if page.previous or page.next %}
   <nav class="post-nav" aria-label="Previous and next posts">
     {%- if page.previous %}<a href="{{ page.previous.url | relative_url }}">← {{ page.previous.title }}</a>{% else %}<span></span>{% endif %}
     {%- if page.next %}<a href="{{ page.next.url | relative_url }}">{{ page.next.title }} →</a>{% endif %}
   </nav>
+  {%- endif %}
 </article>

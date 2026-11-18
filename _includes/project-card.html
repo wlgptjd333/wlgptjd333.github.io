@@ -8,20 +8,31 @@
 <article class="card project" data-category="{{ p.category }}" id="{{ p.id }}">
   <div class="project-top">
     <span class="project-emoji" aria-hidden="true">{{ p.emoji }}</span>
-    <span class="status status-{{ status_class }}">{{ p.status }}</span>
+    <span class="status status-{{ status_class }}">{% if status_class == "live" or status_class == "wip" %}<span class="status-dot" aria-hidden="true"></span>{% endif %}{{ p.status }}</span>
   </div>
   <h3 class="project-title">{{ p.title }}</h3>
+  {%- if p.role %}
+  <p class="project-role">{{ p.role }}</p>
+  {%- endif %}
   <p class="project-summary">{{ p.summary }}</p>
-  {%- if p.tags -%}
+  {%- if p.visual == "live-chart" %}{% include live-chart.html %}{% endif %}
+  {%- if p.stats %}
+  <div class="stats">
+    {%- for s in p.stats %}
+    <div class="stat"><span class="stat-value">{{ s.value }}</span><span class="stat-label">{{ s.label }}</span></div>
+    {%- endfor %}
+  </div>
+  {%- endif %}
+  {%- if p.tags %}
   <ul class="tags" aria-label="Tech stack">
     {%- for t in p.tags %}<li>{{ t }}</li>{% endfor -%}
   </ul>
-  {%- endif -%}
-  {%- if p.links -%}
+  {%- endif %}
+  {%- if p.links %}
   <div class="project-links">
     {%- for l in p.links %}
     <a href="{{ l.url | relative_url }}"{% if l.url contains '://' %} target="_blank" rel="noopener"{% endif %}>{{ l.label }}{% include icon.html name="arrow" %}</a>
     {%- endfor %}
   </div>
-  {%- endif -%}
+  {%- endif %}
 </article>
