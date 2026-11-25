@@ -60,18 +60,19 @@
     - { label: Download, url: "https://github.com/wlgptjd333/coin-float/releases/latest" }
     - { label: GitHub, url: "https://github.com/wlgptjd333/coin-float" }
 
-- id: unmanned-store-anomaly
+- id: store-anomaly-service
   title: Unmanned Store Anomaly Detection
   emoji: "🏪"
-  role: Team project
-  summary: Spotting vandalism, violence, loitering, and falls in an unmanned store from 2D pose sequences.
+  role: Personal project
+  summary: Spotting vandalism, violence, loitering, and falls in an unmanned store from 2D pose sequences, served as a web app.
   stats:
     - { value: "17", label: actions to tell apart }
+    - { value: "90.2%", label: accuracy on an unseen person }
   category: ai
-  tags: [YOLO Pose, Pose sequences, Python]
+  tags: [YOLO Pose, PyTorch, Django, FastAPI]
   status: In progress
   links:
-    - { label: GitHub, url: "https://github.com/wlgptjd333/unmanned-store-anomaly" }
+    - { label: GitHub, url: "https://github.com/wlgptjd333/store-anomaly-service" }
 
 - id: kimchi-inspection
   title: Kimchi Foreign Object Detection
